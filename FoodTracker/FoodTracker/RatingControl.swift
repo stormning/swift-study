@@ -11,7 +11,11 @@ import UIKit
 class RatingControl: UIView {
 
     //MARK: properties
-    var rating = 3
+    var rating = 0 {
+        didSet {
+            setNeedsLayout()
+        }
+    }
     var ratingButtons = [UIButton]()
     let stars = 5
     let spacing = 5
@@ -23,7 +27,7 @@ class RatingControl: UIView {
 
         let filledStarImage = UIImage(named: "filledStar")
         let emptyStarImage = UIImage(named: "emptyStar")
-        for _ in 0 ..< 5 {
+        for _ in 0 ..< stars {
             let button = UIButton()
             button.setImage(emptyStarImage, forState: .Normal)
             button.setImage(filledStarImage, forState: .Selected)

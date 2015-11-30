@@ -15,6 +15,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var ratingControl: RatingControl!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +32,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
 
     // MARK: Actions
-    @IBAction func setDefaultLabelText(sender: UIButton) {
-        mealNameLabel.text = "Default text"
-    }
 
     @IBAction func selectImageFormPhotoLibrary(sender: UITapGestureRecognizer) {
         //Hide keyboard
@@ -62,7 +61,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     // MARK: UIImagePickerControllerDelegate
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String:AnyObject]) {
         // The info dictionary contains multiple representations of the image, and this uses the original.
-        photoImageView.image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        photoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         dismissViewControllerAnimated(true, completion: nil)
     }
 
