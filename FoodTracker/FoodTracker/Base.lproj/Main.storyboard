@@ -48,6 +48,7 @@
                                     <outlet property="nameLabel" destination="msV-zI-uBg" id="x8z-dy-RCU"/>
                                     <outlet property="photoImageView" destination="Cnf-a1-EFI" id="QE0-vj-y88"/>
                                     <outlet property="ratingControl" destination="hIZ-Q6-EBm" id="ait-oM-Ol5"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="LXB-AF-DWL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -122,7 +123,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="wmm-Kd-Czm">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Ekl-a9-4sh"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Ekl-a9-4sh">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="0Vk-P5-eJe"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Jsv-TU-KqL">
                             <connections>
                                 <segue destination="2L4-kA-HRP" kind="unwind" unwindAction="unWindToMealList:" id="EZF-Uq-qlY"/>
@@ -182,10 +187,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ICx-Fn-TE9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="336"/>
+            <point key="canvasLocation" x="1058" y="748"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="256" height="256"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="LXB-AF-DWL"/>
+    </inferredMetricsTieBreakers>
 </document>
