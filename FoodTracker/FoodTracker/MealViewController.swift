@@ -75,5 +75,17 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     // MARK: UINavigationControllerDelegate
 
 
+    // MARK: Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        if saveButton === sender {
+            let name = nameTextField.text ?? ""
+            let photo = photoImageView.image
+            let rating = ratingControl.rating
+            meal = Meal(name: name, photo: photo, rating: rating)
+        }
+    }
+
+
 }
 
