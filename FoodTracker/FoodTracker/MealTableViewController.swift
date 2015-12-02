@@ -19,7 +19,11 @@ class MealTableViewController: UITableViewController {
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem()
 
-        loadSampleMeals()
+        if let savedMeals = loadMeals() {
+            meals += savedMeals
+        } else {
+            loadSampleMeals()
+        }
     }
 
     func loadSampleMeals() {
@@ -63,6 +67,7 @@ class MealTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             meals.removeAtIndex(indexPath.row)
+            saveMeals()
             // Delete the row from the data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
@@ -113,6 +118,8 @@ class MealTableViewController: UITableViewController {
                 meals.append(meal)
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
+            //Save the meals.
+            saveMeals()
         }
     }
 
@@ -123,8 +130,8 @@ class MealTableViewController: UITableViewController {
             print("Failed to save meals...")
         }
     }
-    
-    func loadMeals()->[Meal]?{
+
+    func loadMeals() -> [Meal]? {
         return NSKeyedUnarchiver.unarchiveObjectWithFile(Meal.ArchiveURL.path!) as? [Meal]
     }
 }
