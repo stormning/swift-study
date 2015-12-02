@@ -3,7 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,54 +18,210 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OPV-S1-LNv">
-                                <rect key="frame" x="20" y="20" width="97" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhG-Zb-8VM">
-                                <rect key="frame" x="20" y="50" width="560" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Hf7-v3-Eq2">
+                                <rect key="frame" x="20" y="20" width="600" height="840"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIo-EG-c2p" customClass="CalBtn" customModule="Calculator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="140" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ITv-c9-yMA">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="240"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" text="1" borderStyle="bezel" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="OPV-S1-LNv">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="240"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="0.56163793103448278" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
                                         <animations/>
-                                        <state key="normal" title="C"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNU-Gy-4hZ" customClass="CalBtn" customModule="Calculator" customModuleProvider="target">
-                                        <rect key="frame" x="140" y="0.0" width="140" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="OPV-S1-LNv" secondAttribute="height" multiplier="20:8" id="FyG-yq-RRK"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhG-Zb-8VM">
+                                        <rect key="frame" x="0.0" y="240" width="600" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIo-EG-c2p" customClass="CalBtn" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="C"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNU-Gy-4hZ" customClass="CalBtn" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="150" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="+/-"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcP-VZ-BkL" customClass="CalBtn" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="300" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="%"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lq4-bA-A2v" customClass="CalBtnOrange" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="450" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="÷"/>
+                                            </button>
+                                        </subviews>
                                         <animations/>
-                                        <state key="normal" title="+/-"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcP-VZ-BkL" customClass="CalBtn" customModule="Calculator" customModuleProvider="target">
-                                        <rect key="frame" x="280" y="0.0" width="140" height="30"/>
+                                        <constraints>
+                                            <constraint firstItem="qNU-Gy-4hZ" firstAttribute="width" secondItem="QcP-VZ-BkL" secondAttribute="width" id="8kW-Ab-4aw"/>
+                                            <constraint firstItem="tIo-EG-c2p" firstAttribute="width" secondItem="qNU-Gy-4hZ" secondAttribute="width" id="WdV-q5-llh"/>
+                                            <constraint firstAttribute="width" secondItem="tIo-EG-c2p" secondAttribute="height" multiplier="20:4" id="bsR-vb-wBB"/>
+                                            <constraint firstItem="QcP-VZ-BkL" firstAttribute="width" secondItem="lq4-bA-A2v" secondAttribute="width" id="e9c-Ha-Rf6"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAg-vY-d0H">
+                                        <rect key="frame" x="0.0" y="360" width="600" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRz-ex-l27" customClass="CalBtn" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="7"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppf-n5-PL4" customClass="CalBtn" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="150" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="8"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkd-JH-LiL" customClass="CalBtn" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="300" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="9"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obU-WG-N5f" customClass="CalBtnOrange" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="450" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="x"/>
+                                            </button>
+                                        </subviews>
                                         <animations/>
-                                        <state key="normal" title="%"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lq4-bA-A2v" customClass="CalBtnOrange" customModule="Calculator" customModuleProvider="target">
-                                        <rect key="frame" x="420" y="0.0" width="140" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dRz-ex-l27" secondAttribute="height" multiplier="20:4" id="8Rh-7w-bSo"/>
+                                            <constraint firstItem="Ppf-n5-PL4" firstAttribute="width" secondItem="wkd-JH-LiL" secondAttribute="width" id="UmD-Dx-yGF"/>
+                                            <constraint firstItem="wkd-JH-LiL" firstAttribute="width" secondItem="obU-WG-N5f" secondAttribute="width" id="gn8-dz-P5q"/>
+                                            <constraint firstItem="dRz-ex-l27" firstAttribute="width" secondItem="Ppf-n5-PL4" secondAttribute="width" id="tKr-pV-AgY"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NLU-yl-XHf">
+                                        <rect key="frame" x="0.0" y="480" width="600" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOC-3m-JIy" customClass="CalBtn" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="4"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4L-Fi-RkA" customClass="CalBtn" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="150" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="5"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZr-AW-M3a" customClass="CalBtn" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="300" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="6"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9A-WZ-vqx" customClass="CalBtnOrange" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="450" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="-"/>
+                                            </button>
+                                        </subviews>
                                         <animations/>
-                                        <state key="normal" title="÷"/>
-                                    </button>
+                                        <constraints>
+                                            <constraint firstItem="pZr-AW-M3a" firstAttribute="width" secondItem="i9A-WZ-vqx" secondAttribute="width" id="AyH-Re-Yc8"/>
+                                            <constraint firstItem="QOC-3m-JIy" firstAttribute="width" secondItem="q4L-Fi-RkA" secondAttribute="width" id="EGP-Oh-4Wz"/>
+                                            <constraint firstAttribute="width" secondItem="QOC-3m-JIy" secondAttribute="height" multiplier="20:4" id="PCQ-U9-RdG"/>
+                                            <constraint firstItem="q4L-Fi-RkA" firstAttribute="width" secondItem="pZr-AW-M3a" secondAttribute="width" id="q5E-nf-xEJ"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ViX-Ei-DMP">
+                                        <rect key="frame" x="0.0" y="600" width="600" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c95-g5-oqO" customClass="CalBtn" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNo-fR-7Ky" customClass="CalBtn" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="150" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVG-Gq-mMa" customClass="CalBtn" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="300" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sf5-Xs-OY0" customClass="CalBtnOrange" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="450" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="+"/>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="c95-g5-oqO" secondAttribute="height" multiplier="20:4" id="Yme-jT-Udb"/>
+                                            <constraint firstItem="c95-g5-oqO" firstAttribute="width" secondItem="XNo-fR-7Ky" secondAttribute="width" id="cxp-k5-FNy"/>
+                                            <constraint firstItem="XNo-fR-7Ky" firstAttribute="width" secondItem="lVG-Gq-mMa" secondAttribute="width" id="gfX-zH-0j2"/>
+                                            <constraint firstItem="lVG-Gq-mMa" firstAttribute="width" secondItem="Sf5-Xs-OY0" secondAttribute="width" id="mvO-92-ftM"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csf-mQ-AZm">
+                                        <rect key="frame" x="0.0" y="720" width="600" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2e8-77-I5H" customClass="CalBtn" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="0"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JbN-9l-wYb" customClass="CalBtn" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="300" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="."/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2A-vj-Dtt" customClass="CalBtnOrange" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="450" y="0.0" width="150" height="120"/>
+                                                <animations/>
+                                                <state key="normal" title="="/>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="2e8-77-I5H" secondAttribute="height" multiplier="20:4" id="UOA-Hc-c80"/>
+                                            <constraint firstItem="2e8-77-I5H" firstAttribute="width" secondItem="JbN-9l-wYb" secondAttribute="height" multiplier="10:4" id="gy1-OM-EJD"/>
+                                            <constraint firstItem="JbN-9l-wYb" firstAttribute="width" secondItem="u2A-vj-Dtt" secondAttribute="height" multiplier="5:4" id="vde-uc-4wA"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstItem="tIo-EG-c2p" firstAttribute="width" secondItem="qNU-Gy-4hZ" secondAttribute="width" id="dcL-cP-ga8"/>
-                                    <constraint firstItem="qNU-Gy-4hZ" firstAttribute="width" secondItem="QcP-VZ-BkL" secondAttribute="width" id="hG9-55-m6v"/>
-                                    <constraint firstItem="QcP-VZ-BkL" firstAttribute="width" secondItem="lq4-bA-A2v" secondAttribute="width" id="hJb-EP-IkW"/>
+                                    <constraint firstItem="NLU-yl-XHf" firstAttribute="leading" secondItem="Hf7-v3-Eq2" secondAttribute="leading" id="1CH-5S-4yw"/>
+                                    <constraint firstAttribute="trailing" secondItem="ViX-Ei-DMP" secondAttribute="trailing" id="3ZP-ex-Ah3"/>
+                                    <constraint firstAttribute="trailing" secondItem="csf-mQ-AZm" secondAttribute="trailing" id="EZF-hk-wOf"/>
+                                    <constraint firstAttribute="trailing" secondItem="ITv-c9-yMA" secondAttribute="trailing" id="KKn-Zu-mWO"/>
+                                    <constraint firstItem="XAg-vY-d0H" firstAttribute="leading" secondItem="Hf7-v3-Eq2" secondAttribute="leading" id="NWm-AN-ULv"/>
+                                    <constraint firstItem="rhG-Zb-8VM" firstAttribute="leading" secondItem="Hf7-v3-Eq2" secondAttribute="leading" id="PKh-yL-coV"/>
+                                    <constraint firstItem="ViX-Ei-DMP" firstAttribute="leading" secondItem="Hf7-v3-Eq2" secondAttribute="leading" id="Szv-3o-eiE"/>
+                                    <constraint firstItem="csf-mQ-AZm" firstAttribute="leading" secondItem="Hf7-v3-Eq2" secondAttribute="leading" id="Zy1-Ey-uRj"/>
+                                    <constraint firstItem="ITv-c9-yMA" firstAttribute="leading" secondItem="Hf7-v3-Eq2" secondAttribute="leading" id="g3V-D4-QeC"/>
+                                    <constraint firstAttribute="trailing" secondItem="XAg-vY-d0H" secondAttribute="trailing" id="uBz-2K-Lzr"/>
+                                    <constraint firstAttribute="trailing" secondItem="rhG-Zb-8VM" secondAttribute="trailing" id="xGU-dP-QQ4"/>
+                                    <constraint firstAttribute="trailing" secondItem="NLU-yl-XHf" secondAttribute="trailing" id="zPa-c9-riU"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="rhG-Zb-8VM" secondAttribute="trailing" id="Bhk-pP-bGu"/>
-                            <constraint firstItem="rhG-Zb-8VM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VPi-3I-ay5"/>
+                            <constraint firstAttribute="trailing" secondItem="Hf7-v3-Eq2" secondAttribute="trailing" id="qdw-HC-lG9"/>
+                            <constraint firstItem="Hf7-v3-Eq2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uIJ-uY-DtL"/>
+                            <constraint firstAttribute="bottom" secondItem="Hf7-v3-Eq2" secondAttribute="bottom" id="zV4-bS-e68"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="356"/>
         </scene>
     </scenes>
 </document>

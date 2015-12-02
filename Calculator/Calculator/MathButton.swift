@@ -10,10 +10,10 @@ import UIKit
 
 class MathButton: UIButton {
 
-    var dftBgColor: CGColor! = nil
-    var dftTintColor: UIColor! = nil
-    var touchBgColor: CGColor! = nil
-    var touchTintColor: UIColor! = nil
+    var dftBgColor: CGColor!
+    var dftTintColor: UIColor!
+    var touchBgColor: CGColor!
+    var touchTintColor: UIColor!
 
     func config(dftBgColor: UIColor, dftTintColor: UIColor, touchBgColor: UIColor, touchTintColor: UIColor) {
         self.dftBgColor = dftBgColor.CGColor
@@ -23,8 +23,11 @@ class MathButton: UIButton {
         self.layer.backgroundColor = self.dftBgColor
         self.tintColor = self.dftTintColor
         self.addTarget(self, action: Selector("onTouchDown:"), forControlEvents: .TouchDown)
-        self.addTarget(self, action: Selector("onTouchUpInside:"), forControlEvents: [.TouchUpInside,.TouchUpOutside])
+        self.addTarget(self, action: Selector("onTouchUpInside:"), forControlEvents: .TouchUpOutside)
+        self.layer.borderColor = UIColor(colorLiteralRed: 0.56, green: 0.56, blue: 0.56, alpha: 1).CGColor
         self.layer.borderWidth = 0.5
+        self.adjustsImageWhenHighlighted = false
+        self.tintAdjustmentMode = .Dimmed
     }
 
     required init?(coder aDecoder: NSCoder) {
