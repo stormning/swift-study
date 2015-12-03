@@ -80,7 +80,7 @@ class ViewController: UIViewController {
         } else if (changeType == "%") {
             toChange = "\((toChange as NSString).doubleValue / 100)"
         }
-        
+
         //rewrite
         if showSecond {
             second = toChange
@@ -101,8 +101,6 @@ class ViewController: UIViewController {
             first = "\(((first as NSString).doubleValue * (second as NSString).doubleValue))";
         } else if (op == "÷") {
             first = "\(((first as NSString).doubleValue / (second as NSString).doubleValue))";
-        } else if (op == "%") {
-            first = "\(((first as NSString).doubleValue % (second as NSString).doubleValue))";
         } else {
             first = "0"
         }
