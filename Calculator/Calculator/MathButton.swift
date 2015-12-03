@@ -23,11 +23,10 @@ class MathButton: UIButton {
         self.layer.backgroundColor = self.dftBgColor
         self.tintColor = self.dftTintColor
         self.addTarget(self, action: Selector("onTouchDown:"), forControlEvents: .TouchDown)
-        self.addTarget(self, action: Selector("onTouchUpInside:"), forControlEvents: .TouchUpOutside)
+        self.addTarget(self, action: Selector("onTouchUpInside:"), forControlEvents: .TouchUpInside)
         self.layer.borderColor = UIColor(colorLiteralRed: 0.56, green: 0.56, blue: 0.56, alpha: 1).CGColor
         self.layer.borderWidth = 0.5
-        self.adjustsImageWhenHighlighted = false
-        self.tintAdjustmentMode = .Dimmed
+        self.titleLabel?.font=UIFont(name: "Arial", size: CGFloat(28))
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -43,5 +42,9 @@ class MathButton: UIButton {
     func onTouchUpInside(sender: UIButton) {
         sender.layer.backgroundColor = dftBgColor
         sender.tintColor = dftTintColor
+    }
+    
+    func getValue()->String{
+        return (self.titleLabel?.text)!
     }
 }
