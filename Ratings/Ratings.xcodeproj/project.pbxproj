@@ -11,6 +11,7 @@
 		76599EB51C21C7C4007ED13C /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76599EB41C21C7C4007ED13C /* PlayersViewController.swift */; };
 		76599EB71C21C82D007ED13C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76599EB61C21C82D007ED13C /* Player.swift */; };
 		76599EB91C21C892007ED13C /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76599EB81C21C892007ED13C /* SampleData.swift */; };
+		76599EBB1C23D334007ED13C /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76599EBA1C23D334007ED13C /* PlayerDetailsViewController.swift */; };
 		768CB9FE1C21332A0084A293 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CB9FD1C21332A0084A293 /* AppDelegate.swift */; };
 		768CBA031C21332A0084A293 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768CBA011C21332A0084A293 /* Main.storyboard */; };
 		768CBA051C21332A0084A293 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 768CBA041C21332A0084A293 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		76599EB41C21C7C4007ED13C /* PlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		76599EB61C21C82D007ED13C /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		76599EB81C21C892007ED13C /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		76599EBA1C23D334007ED13C /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
 		768CB9FA1C2133290084A293 /* Ratings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ratings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		768CB9FD1C21332A0084A293 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		768CBA021C21332A0084A293 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				76599EB61C21C82D007ED13C /* Player.swift */,
 				76599EB81C21C892007ED13C /* SampleData.swift */,
 				6555F7D7124788A2CBD1FE5A /* PlayerCell.swift */,
+				76599EBA1C23D334007ED13C /* PlayerDetailsViewController.swift */,
 			);
 			path = Ratings;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			files = (
 				768CB9FE1C21332A0084A293 /* AppDelegate.swift in Sources */,
 				76599EB71C21C82D007ED13C /* Player.swift in Sources */,
+				76599EBB1C23D334007ED13C /* PlayerDetailsViewController.swift in Sources */,
 				76599EB51C21C7C4007ED13C /* PlayersViewController.swift in Sources */,
 				76599EB91C21C892007ED13C /* SampleData.swift in Sources */,
 				6555F1774885A7876E073BAF /* PlayerCell.swift in Sources */,
