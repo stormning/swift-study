@@ -10,6 +10,12 @@ import UIKit
 
 class PlayerDetailsViewController: UITableViewController {
 
+    var game: String = "Chess" {
+        didSet {
+            detailLabel.text? = game
+        }
+    }
+
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var detailLabel: UILabel!
 
@@ -23,7 +29,18 @@ class PlayerDetailsViewController: UITableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SavePlayerDetail" {
-            player = Player(name: nameTextField.text!, game: "Chess", rating: 1)
+            player = Player(name: nameTextField.text!, game: game, rating: 1)
+        }
+        if segue.identifier == "PickGame" {
+            if let gamePickerController = segue.destinationViewController as? GamePickerViewController{
+                gamePickerController.selectedGame = game
+            }
+        }
+    }
+
+    @IBAction func unwindWithSelectedGame(segue: UIStoryboardSegue) {
+        if let gamePickerViewController = segue.sourceViewController as? GamePickerViewController, selectedGame = gamePickerViewController.selectedGame {
+            game = selectedGame
         }
     }
 }

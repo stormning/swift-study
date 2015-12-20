@@ -16,6 +16,7 @@
 		768CBA031C21332A0084A293 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768CBA011C21332A0084A293 /* Main.storyboard */; };
 		768CBA051C21332A0084A293 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 768CBA041C21332A0084A293 /* Assets.xcassets */; };
 		768CBA081C21332A0084A293 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768CBA061C21332A0084A293 /* LaunchScreen.storyboard */; };
+		76A791D51C24F60D0053CF9F /* GamePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A791D41C24F60D0053CF9F /* GamePickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		768CBA041C21332A0084A293 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		768CBA071C21332A0084A293 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		768CBA091C21332A0084A293 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76A791D41C24F60D0053CF9F /* GamePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				76599EB81C21C892007ED13C /* SampleData.swift */,
 				6555F7D7124788A2CBD1FE5A /* PlayerCell.swift */,
 				76599EBA1C23D334007ED13C /* PlayerDetailsViewController.swift */,
+				76A791D41C24F60D0053CF9F /* GamePickerViewController.swift */,
 			);
 			path = Ratings;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			files = (
 				768CB9FE1C21332A0084A293 /* AppDelegate.swift in Sources */,
 				76599EB71C21C82D007ED13C /* Player.swift in Sources */,
+				76A791D51C24F60D0053CF9F /* GamePickerViewController.swift in Sources */,
 				76599EBB1C23D334007ED13C /* PlayerDetailsViewController.swift in Sources */,
 				76599EB51C21C7C4007ED13C /* PlayersViewController.swift in Sources */,
 				76599EB91C21C892007ED13C /* SampleData.swift in Sources */,
